@@ -7,37 +7,38 @@ namespace SwitchboardSimulation
     {
         public static Switchboard SetupSwitchboard()
         {
-            Console.WriteLine("Switchboard Simulator - Welcome!");
+            Console.Clear();
+            Console.WriteLine("Switchboard Setup - Welcome!");
+            Console.WriteLine("--------------------------------");
 
             int numFans = InputValidator.GetValidInput("Enter the number of fans: ");
             int numACs = InputValidator.GetValidInput("Enter the number of ACs: ");
             int numBulbs = InputValidator.GetValidInput("Enter the number of bulbs: ");
 
+            Console.WriteLine("--------------------------------");
+
             // Create an instance of the Switchboard
             Switchboard switchboard = new Switchboard();
 
-            for (int i = 1; i <= numFans; i++)
-            {
-                Appliance appliance = new Appliance(Enums.ApplianceType.Fan, i);
-                Switch switchForFan = new Switch(appliance);
-                switchboard.AddSwitch(switchForFan);
-            }
+            AddAppliances(switchboard, Enums.ApplianceType.Fan, numFans);
+            AddAppliances(switchboard, Enums.ApplianceType.AC, numACs);
+            AddAppliances(switchboard, Enums.ApplianceType.Bulb, numBulbs);
 
-            for (int i = 1; i <= numACs; i++)
-            {
-                Appliance appliance = new Appliance(Enums.ApplianceType.AC, i);
-                Switch switchForAC = new Switch(appliance);
-                switchboard.AddSwitch(switchForAC);
-            }
-
-            for (int i = 1; i <= numBulbs; i++)
-            {
-                Appliance appliance = new Appliance(Enums.ApplianceType.Bulb, i);
-                Switch switchForBulb = new Switch(appliance);
-                switchboard.AddSwitch(switchForBulb);
-            }
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine("Setup completed.");
+            Console.WriteLine("--------------------------------");
 
             return switchboard;
+        }
+
+        private static void AddAppliances(Switchboard switchboard, Enums.ApplianceType type, int count)
+        {
+            for (int i = 1; i <= count; i++)
+            {
+                Appliance appliance = new Appliance(type, i);
+                Switch switchForAppliance = new Switch(appliance);
+                switchboard.AddSwitch(switchForAppliance);
+            }
         }
     }
 }

@@ -9,13 +9,17 @@ namespace SwitchboardSimulation
         {
             Console.Clear();
             Console.WriteLine("Switchboard Menu:");
+            Console.WriteLine("---------------------------------------------");
 
             for (int i = 0; i < switchboard.Switches.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. {switchboard.Switches[i].AssociatedAppliance.GetName()} is {(switchboard.Switches[i].IsOn ? "On" : "Off")}");
+                string applianceName = switchboard.Switches[i].AssociatedAppliance.GetName();
+                string applianceStatus = switchboard.Switches[i].IsOn ? "On" : "Off";
+                Console.WriteLine($"{i + 1}. {applianceName} is {applianceStatus}");
             }
 
             Console.WriteLine("0. Exit");
+            Console.WriteLine("---------------------------------------------");
         }
 
         public static void ControlAppliances(Switchboard switchboard)
@@ -24,23 +28,26 @@ namespace SwitchboardSimulation
             {
                 DisplayMenu(switchboard);
 
-                int choice = InputValidator.GetValidChoice(0,switchboard.Switches.Count);
+                Console.Write("Enter your choice (0-3): ");
+                int choice = InputValidator.GetValidChoice(0, switchboard.Switches.Count);
 
                 if (choice == 0)
                 {
                     break;
                 }
-                else
+                else if (choice >= 1 && choice <= switchboard.Switches.Count)
                 {
                     Switch selectedSwitch = switchboard.Switches[choice - 1];
                     Appliance selectedAppliance = selectedSwitch.AssociatedAppliance;
                     Console.WriteLine($"Selected {selectedAppliance.GetName()}:");
+                    Console.WriteLine("---------------------------------------------");
 
                     string toggleOption = selectedSwitch.IsOn ? "Off" : "On";
                     Console.WriteLine($"1. Switch {selectedAppliance.GetName()} {toggleOption}");
                     Console.WriteLine("2. Back");
 
-                    int applianceChoice = InputValidator.GetValidChoice(1,2);
+                    Console.Write("Enter your choice (1-2): ");
+                    int applianceChoice = InputValidator.GetValidChoice(1, 2);
 
                     if (applianceChoice == 1)
                     {

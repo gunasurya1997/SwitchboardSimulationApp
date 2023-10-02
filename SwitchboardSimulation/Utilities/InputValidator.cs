@@ -12,12 +12,21 @@ namespace SwitchboardSimulation.Utilities
             while (!isValidInput)
             {
                 Console.Write(prompt);
-                isValidInput = int.TryParse(Console.ReadLine(), out input);
+                string inputString = Console.ReadLine();
 
-                if (!isValidInput || input < 0)
+                if (string.IsNullOrWhiteSpace(inputString))
                 {
-                    Console.WriteLine("Invalid input. Please enter a non-negative integer.");
-                    isValidInput = false; 
+                    Console.WriteLine("Input cannot be empty. Please enter a non-negative integer.");
+                }
+                else
+                {
+                    isValidInput = int.TryParse(inputString, out input);
+
+                    if (!isValidInput || input < 0)
+                    {
+                        Console.WriteLine("Invalid input. Please enter a non-negative integer.");
+                        isValidInput = false;
+                    }
                 }
             }
 
@@ -32,12 +41,21 @@ namespace SwitchboardSimulation.Utilities
             while (!isValidChoice)
             {
                 Console.Write($"Enter your choice ({minValue}-{maxValue}): ");
-                isValidChoice = int.TryParse(Console.ReadLine(), out choice);
+                string choiceString = Console.ReadLine();
 
-                if (!isValidChoice || choice < minValue || choice > maxValue)
+                if (string.IsNullOrWhiteSpace(choiceString))
                 {
-                    Console.WriteLine($"Invalid choice. Please enter a number between {minValue} and {maxValue}.");
-                    isValidChoice = false; 
+                    Console.WriteLine("Choice cannot be empty. Please enter a number.");
+                }
+                else
+                {
+                    isValidChoice = int.TryParse(choiceString, out choice);
+
+                    if (!isValidChoice || choice < minValue || choice > maxValue)
+                    {
+                        Console.WriteLine($"Invalid choice. Please enter a number between {minValue} and {maxValue}.");
+                        isValidChoice = false;
+                    }
                 }
             }
 
