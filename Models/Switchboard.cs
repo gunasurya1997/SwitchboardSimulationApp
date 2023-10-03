@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace SwitchboardSimulation
+﻿namespace SwitchboardSimulation.Models
 {
     public class Switchboard
     {

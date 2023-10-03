@@ -1,4 +1,4 @@
-﻿namespace SwitchboardSimulation
+﻿namespace SwitchboardSimulation.Utilities
 {
     public class Enums
     {
@@ -7,6 +7,11 @@
             Fan,
             AC,
             Bulb
+        }
+        public enum State
+        {
+            Off,
+            On
         }
     }
 }

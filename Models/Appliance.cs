@@ -1,6 +1,7 @@
-﻿using static SwitchboardSimulation.Enums;
+﻿
+using static SwitchboardSimulation.Utilities.Enums;
 
-namespace SwitchboardSimulation
+namespace SwitchboardSimulation.Models
 {
     public class Appliance
     {

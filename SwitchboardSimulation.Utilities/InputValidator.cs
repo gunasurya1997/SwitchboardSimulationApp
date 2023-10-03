@@ -2,7 +2,7 @@
 
 namespace SwitchboardSimulation.Utilities
 {
-    public static class InputValidator
+    public class InputValidator
     {
         public static int GetValidInput(string prompt)
         {
