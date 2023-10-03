@@ -1,4 +1,4 @@
-﻿namespace SwitchboardSimulation
+﻿namespace SwitchboardSimulation.Models
 {
     public class Switch
     {
