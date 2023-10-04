@@ -1,4 +1,6 @@
-﻿using static SwitchboardSimulation.Utilities.Enums;
+﻿using System.ComponentModel;
+using System.Reflection;
+using static SwitchboardSimulation.Utilities.Enums;
 
 namespace SwitchboardSimulation.Models
 {
@@ -6,16 +8,28 @@ namespace SwitchboardSimulation.Models
     {
         public ApplianceType Type { get; }
         public int Id { get; }
+
         public Appliance(ApplianceType type, int number)
         {
             Type = type;
             Id = number;
         }
 
-        // Method to get the name of the appliance based on its type
         public string GetName()
         {
-            return $"{Type} {Id}";
+            string applianceDescription = GetApplianceDescription();
+            return $"{applianceDescription} {Id}";
         }
+
+        private string GetApplianceDescription()
+        {
+            DescriptionAttribute attribute = Type
+                .GetType()
+                .GetField(Type.ToString())
+                ?.GetCustomAttribute<DescriptionAttribute>();
+
+            return attribute?.Description ?? Type.ToString();
+        }
+
     }
 }

@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchboardSimulation", "Sw
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchboardSimulation.Models", "SwitchboardSimulation.Models\SwitchboardSimulation.Models.csproj", "{E75219E3-CFB4-4C87-ADDD-D3ADDE025190}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchboardSimulation.Views", "SwitchboardSimulation.Views\SwitchboardSimulation.Views.csproj", "{D6996C84-D301-42A8-A9B2-728E13625843}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchboardSimulation.App", "SwitchboardSimulation.Views\SwitchboardSimulation.App.csproj", "{D6996C84-D301-42A8-A9B2-728E13625843}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchboardSimulation.Utilities", "SwitchboardSimulation.Utilities\SwitchboardSimulation.Utilities.csproj", "{3765907E-7EA1-4A32-92AD-A930CF661A68}"
 EndProject

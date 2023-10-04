@@ -1,9 +1,9 @@
-﻿using SwitchboardSimulation.Views;
+﻿using SwitchboardSimulation.App;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        SwitchboardView.Initialize();
+        SwitchboardApp.Initialize();
     }
 }

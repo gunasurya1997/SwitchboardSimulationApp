@@ -4,9 +4,9 @@ using SwitchboardSimulation.Utilities;
 using System;
 using static SwitchboardSimulation.Utilities.Enums;
 
-namespace SwitchboardSimulation.Views
+namespace SwitchboardSimulation.App
 {
-    public class SwitchboardView
+    public class SwitchboardApp
     {
         public static void Initialize()
         {
@@ -52,13 +52,18 @@ namespace SwitchboardSimulation.Views
             {
                 string applianceName = switchboard.Switches[i].AssociatedAppliance.GetName();
                 State applianceStatus = switchboard.Switches[i].IsOn ? State.On : State.Off;
-                Console.WriteLine("{0}\t{1}\t\t{2}", i + 1, applianceName, applianceStatus);
+
+                Console.WriteLine($"{i + 1,-4}" +
+                                  $"{applianceName,-20}" +
+                                  $"{applianceStatus,-10}");
             }
+
             Console.WriteLine("══════════════════════════════════════════");
             Console.WriteLine();
-            Console.WriteLine("Enter 0 to Exit from the Menu");
+            Console.WriteLine("Enter \"0\" to Exit from the Menu");
             Console.WriteLine();
         }
+
 
         private static void ShowSwitchMenu(Appliance selectedAppliance, Switch selectedSwitch)
         {
@@ -68,8 +73,6 @@ namespace SwitchboardSimulation.Views
             State toggleOption = selectedSwitch.IsOn ? State.Off : State.On;
             Console.WriteLine($"1. Switch {selectedAppliance.GetName()} {toggleOption}");
             Console.WriteLine("2. Back");
-
-            Console.Write("Enter your choice (1-2): ");
         }
     }
 }
