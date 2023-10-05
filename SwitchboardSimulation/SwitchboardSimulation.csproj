@@ -50,13 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SwitchboardSimulation.Services\SwitchboardSimulation.Services.csproj">
-      <Project>{D9391E60-F2EE-40D0-9831-48C479258F01}</Project>
-      <Name>SwitchboardSimulation.Services</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SwitchboardSimulation.Views\SwitchboardSimulation.App.csproj">
-      <Project>{D6996C84-D301-42A8-A9B2-728E13625843}</Project>
-      <Name>SwitchboardSimulation.App</Name>
+    <ProjectReference Include="..\SiwtchboarSimulation.App\SiwtchboarSimulation.App.csproj">
+      <Project>{d67e31a9-2bf2-4c96-8296-0bf9ca481405}</Project>
+      <Name>SiwtchboarSimulation.App</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

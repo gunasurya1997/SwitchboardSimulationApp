@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D6996C84-D301-42A8-A9B2-728E13625843}</ProjectGuid>
+    <ProjectGuid>{D67E31A9-2BF2-4C96-8296-0BF9CA481405}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SwitchboardSimulation.Views</RootNamespace>
-    <AssemblyName>SwitchboardSimulation.Views</AssemblyName>
+    <RootNamespace>SiwtchboarSimulation.App</RootNamespace>
+    <AssemblyName>SiwtchboarSimulation.App</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,20 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SwitchboardApp.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SwitchboardSimulation.Models\SwitchboardSimulation.Models.csproj">
-      <Project>{E75219E3-CFB4-4C87-ADDD-D3ADDE025190}</Project>
+      <Project>{e75219e3-cfb4-4c87-addd-d3adde025190}</Project>
       <Name>SwitchboardSimulation.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\SwitchboardSimulation.Services\SwitchboardSimulation.Services.csproj">
-      <Project>{D9391E60-F2EE-40D0-9831-48C479258F01}</Project>
+      <Project>{d9391e60-f2ee-40d0-9831-48c479258f01}</Project>
       <Name>SwitchboardSimulation.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\SwitchboardSimulation.Utilities\SwitchboardSimulation.Utilities.csproj">
-      <Project>{3765907E-7EA1-4A32-92AD-A930CF661A68}</Project>
+      <Project>{3765907e-7ea1-4a32-92ad-a930cf661a68}</Project>
       <Name>SwitchboardSimulation.Utilities</Name>
     </ProjectReference>
   </ItemGroup>

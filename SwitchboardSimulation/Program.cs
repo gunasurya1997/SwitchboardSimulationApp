@@ -1,4 +1,5 @@
-﻿using SwitchboardSimulation.App;
+﻿
+using SwitchboardSimulation.App;
 
 class Program
 {
