@@ -6,7 +6,7 @@ using static SwitchboardSimulation.Utilities.Enums;
 
 namespace SwitchboardSimulation.App
 {
-    public class SwitchboardApp
+    public class SwitchboardApplication
     {
         public static void Initialize()
         {

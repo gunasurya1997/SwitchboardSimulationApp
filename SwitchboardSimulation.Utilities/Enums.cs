@@ -6,9 +6,11 @@ namespace SwitchboardSimulation.Utilities
     {
         public enum ApplianceType
         {
+            [Description("Fan")]
             Fan,
             [Description("Air Conditioner")]
             AC,
+            [Description("Lamp")]
             Bulb
         }
         public enum State

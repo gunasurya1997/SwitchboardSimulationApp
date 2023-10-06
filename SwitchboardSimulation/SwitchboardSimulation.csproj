@@ -54,6 +54,10 @@
       <Project>{d67e31a9-2bf2-4c96-8296-0bf9ca481405}</Project>
       <Name>SiwtchboarSimulation.App</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SwitchboardSimulation.Utilities\SwitchboardSimulation.Utilities.csproj">
+      <Project>{3765907e-7ea1-4a32-92ad-a930cf661a68}</Project>
+      <Name>SwitchboardSimulation.Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
