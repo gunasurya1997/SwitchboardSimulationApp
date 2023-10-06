@@ -1,9 +1,10 @@
-﻿using SwitchboardSimulation.App;
+﻿
+using SwitchboardSimulation.App;
 
 class Program
 {
     static void Main()
     {
-        SwitchboardApp.Initialize();
+        SwitchboardApplication.Initialize();
     }
 }
